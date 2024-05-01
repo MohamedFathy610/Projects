@@ -36,48 +36,13 @@ for(int i = 0 ; i <4 ;i++){
         }
         cout << "|\n  --------------------------" << endl;
         
-        // if(i == 0){
-        //      for(int j = 0 ; j < 4 ;j ++){
-        //          if(j == 3){
-        //              cout << "|   "  << (char)arr[i][j] << " ";
-        //              continue;
-        //          }
-        //          cout << "|  "  << (char)arr[i][j] << "  ";
-        //      }
-         
-        // }
-        // else{
-        //     for(int j = 0 ; j < 4 ;j ++){
-        //         if(j == 3){
-        //             cout << "|   "  << (char)arr[i][j] << "  ";
-        //             continue;
-        //         }
-        //         cout << "|  "  << (char)arr[i][j] << "  ";
-        //     }
-        // }
-        // cout << " |" << endl;
-        // cout << "  --------------------------" << endl;
-    
     }
     Beep(400,100);
     
 
 
 }
-// void che(char P1 , char P2){
-//     if(toupper(P1) != 'X'  || toupper(P1) != 'O'){
-//         cout << "Player 1 -> You have to choose betwen X or Y ONLY" << endl; 
-//         cin >> P1;
-//         che(P1,P2);
-//     }else if(toupper(P2) != 'X'  || toupper(P2) != 'O'){
-//         cout << "Player 2 -> You have to choose betwen X or Y ONLY" << endl; 
-//         cin >> P2;
-//         che(P1,P2);
-//     }else{
-//         return;
-//     }
 
-// }
 void the_game(){
     if(flag){
         cout << "  -----------------------" << '\n';
@@ -221,8 +186,6 @@ bool check_If_Any_Player_win(){
 }
 int main(){
     display();
-    // char player1;
-    // char player2;
     cout << "Player 1: choose bewteen X and O" << '\n';
     cin >> player1;
     cout << "Player 2: choose bewteen X and O" << '\n';
