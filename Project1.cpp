@@ -2,13 +2,13 @@
 #include <windows.h>
 // #include <unistd.h>
 using namespace std;
-int arr[4][4];
-    char player1;
-    char player2;
-    bool x = false;
+int arr[4][4];                    //x-oالارراي اللي هيبقي جواها ال
+    char player1;                //حرف اللاعب الاول
+    char player2;                //حرف اللاعب الثاني
+    bool x = false;               // trueلو اللاعب اللي مختار اكس كسب دا يبقي ب
     bool o = false;
-    bool flag = true;
-void display(){
+    bool flag = true;               // دا هنحتاجو عشان نغير الادوار هتعرفو بعدين
+void display(){                    //فانكشن بتظهر الشبكه
 /*
                                      |  1   |  2    |  3    |    4    |
                                      ----------------------------------
@@ -25,7 +25,7 @@ void display(){
 cout << "  |  1  |  2  |  3  |  4  |" << '\n';
 cout << "  --------------------------" << endl;
 for(int i = 0 ; i <4 ;i++){
-        cout << i+1 << ' ' ;
+        cout << i+1 << ' ' ;                    //عشان يطبع الرقم اللي جنب كل صف زي مانتا شايف كده
         for(int j = 0 ; j < 4 ; j ++ ){
             if((char)arr[i][j] == 0)
                 cout << "|  " << (char)arr[i][j] << "   " ;
@@ -43,25 +43,26 @@ for(int i = 0 ; i <4 ;i++){
 
 }
 
-void the_game(){
-    if(flag){
+void the_game(){                //دي بقا المسووله عن اللعب بقا هي اللي بتحدد مين اللي عليه الدور وتشوف لو في شخص حط في مكان مينفعش
+    if(flag){                    //عشان يقولي ان كده دور اللاعب التانيfalse اللاعب الاولي هو اللي عليه الدور وبعد اللاعب الاول م بيخلص بيتعمل trueاللي عاملو فوق دا لما بيكون ب boolاللي جوا دي ف دا الflag بالنسبة ل
+        //اللي انا كاتبها دي بس انا بختصرflag هي هي  flag == true ملحوظه 
         cout << "  -----------------------" << '\n';
         cout << "  player 1 it's your turn" << "\n";
         cout << "  -----------------------" << "\n\n";
         cout << "--choose your Coordinates--" << '\n';
         int x,y;
         cin >> x >> y;
-        if(arr[x-1][y-1] == 'X' || arr[x-1][y-1] == 'O' ){
+        if(arr[x-1][y-1] == 'X' || arr[x-1][y-1] == 'O' ){            //بشوف لو المكان اللي اختارو اللاعب حد اختارو قبل كده ولا لا
             cout << "You have to choose another Coordinates \n";
             the_game();
             return;
         }
-        if(x > 4 || y > 4){
+        if(x > 4 || y > 4){                                //لو الرقم الللي اختارو اكبر من 4
             cout << "the number must be less than or equel 4" << '\n';
             the_game();
             return;
         }
-        arr[x-1][y-1] = toupper(player1);
+        arr[x-1][y-1] = toupper(player1);            //لو الرقم اللي حطو الشحص كان صح وعدي من كل اللي فات هيحطو في الارري بقا
         flag = false;
 
     }else{
@@ -86,7 +87,7 @@ void the_game(){
 
     }
 }
-void check(char P1, char P2){
+void check(char P1, char P2){            //دي فانكشن بتشتغل لما اللاعب يدخل الحرف بتاعو عشان تشوف هو مظبوط ولا لا
     
     if( (toupper(P1) != 88) && toupper(P1) != 79){
         cout << "Player 1 -> You have to choose betwen X or O ONLY" << endl; 
@@ -114,7 +115,7 @@ void check(char P1, char P2){
 }
 
 
-bool check_If_Any_Player_win(){
+bool check_If_Any_Player_win(){        //دي بقا بتشوف كل مره في لاعب كسب ولا لا
     int tmp =0;
 //--------------------------------------------------------------------
     for(int i =0 ; i < 4 ; i++){
@@ -218,7 +219,7 @@ int main(){
         }
         display();
     }
-    if(!check_If_Any_Player_win()){
+    if(!check_If_Any_Player_win()){            //ويبقي كده الجيم خلص تعادل false لو مفيش لعيبه كسبو بعد ما المربعات كلها اتملت ف كده معناه ان الفانكشن هترجع 
         cout << "\n The Game was gone to DRAW" << "\n";
     }
 
