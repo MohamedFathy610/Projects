@@ -200,19 +200,19 @@ int main(){
             if(x){
                 if(toupper(player1) == 'X' ){
                     display();  
-                    cout << "⋅˚₊‧ ୨ 𝑷𝑳𝑨𝒀𝑬𝑹 𝟏 𝑰𝑺 𝑻𝑯𝑬 𝑾𝑰𝑵𝑵𝑬𝑹 ୧ ‧₊˚ ⋅" << endl;
+                    cout << "player 1 is the winner " << endl;
                 }
                 else if(toupper(player2) == 'X'){
                     display();  
-                    cout << "⋅˚₊‧ ୨ 𝑷𝑳𝑨𝒀𝑬𝑹 𝟐 𝑰𝑺 𝑻𝑯𝑬 𝑾𝑰𝑵𝑵𝑬𝑹 ୧ ‧₊˚ ⋅r" << endl;
+                    cout << "player 2 is the winner" << endl;
                 }
             }else if(o){
                 if(toupper(player1) == 'O' )
                     display();  
-                    cout << "⋅˚₊‧ ୨ 𝑷𝑳𝑨𝒀𝑬𝑹 𝟏 𝑰𝑺 𝑻𝑯𝑬 𝑾𝑰𝑵𝑵𝑬𝑹 ୧ ‧₊˚ ⋅" << endl;
+                    cout << "player 1 is the winner" << endl;
                 if(toupper(player2) == 'O')
                     display();  
-                    cout << "⋅˚₊‧ ୨ 𝑷𝑳𝑨𝒀𝑬𝑹 𝟐 𝑰𝑺 𝑻𝑯𝑬 𝑾𝑰𝑵𝑵𝑬𝑹 ୧ ‧₊˚ ⋅" << endl;
+                    cout << "player 2 is the winner" << endl;
 
 
             }
@@ -224,6 +224,12 @@ int main(){
         cout << "\n The Game was gone to DRAW" << "\n";
     }
 
-
-
+Cout<< "if you want to play again press W" <<'\n' ;
+char t;
+    cin>>t;
+    if(toupper(t) == 'W' ){
+			main() ;
+    } 
+        
+return 0;
 }
