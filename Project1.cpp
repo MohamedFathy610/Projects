@@ -1,6 +1,5 @@
 #include <iostream>
 #include <windows.h>
-// #include <unistd.h>
 using namespace std;
 int arr[4][4];                    //x-oالارراي اللي هيبقي جواها ال
     char player1;                //حرف اللاعب الاول
@@ -21,7 +20,7 @@ void display(){                    //فانكشن بتظهر الشبكه
                                    4 |      |       |       |         |
                                      ----------------------------------
 */
-
+ system("cls");
 cout << "  |  1  |  2  |  3  |  4  |" << '\n';
 cout << "  --------------------------" << endl;
 for(int i = 0 ; i <4 ;i++){
@@ -37,8 +36,7 @@ for(int i = 0 ; i <4 ;i++){
         cout << "|\n  --------------------------" << endl;
         
     }
-    //Beep(400,100);
-    
+
 
 
 }
@@ -207,12 +205,12 @@ int main(){
                     cout << "player 2 is the winner" << endl;
                 }
             }else if(o){
-                if(toupper(player1) == 'O' )
+                if(toupper(player1) == 'O' ){
                     display();  
-                    cout << "player 1 is the winner" << endl;
-                if(toupper(player2) == 'O')
+                    cout << "player 1 is the winner" << endl;}
+                if(toupper(player2) == 'O'){
                     display();  
-                    cout << "player 2 is the winner" << endl;
+                    cout << "player 2 is the winner" << endl;}
 
 
             }
@@ -224,7 +222,7 @@ int main(){
         cout << "\n The Game was gone to DRAW" << "\n";
     }
 
-Cout<< "if you want to play again press W" <<'\n' ;
+cout<< "if you want to play again press W" <<'\n' ;
 char t;
     cin>>t;
     if(toupper(t) == 'W' ){
