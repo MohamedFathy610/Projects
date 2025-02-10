@@ -40,7 +40,7 @@ public class StudentManagementSystem {
         system.displayAll();
 
         
-        system.updateStudent(1, "Alice Smith", 21);
+        system.updateStudent(1, "Mohamed", 21);
         System.out.println("\n===== After Updating Student 1 =====");
         system.displayAll();
 
